@@ -9,7 +9,8 @@ def fact(n):
 def calc_binom(n, k):
     return int(fact(n)/(fact(k)*fact(n-k)))
 
-lines = 10
+
+lines = int(input("Number of lines: "))
 
 pascal_triangle = []
 for i in range(lines):
@@ -18,8 +19,8 @@ for i in range(lines):
         nums.append(calc_binom(i, i-j))
     pascal_triangle.append(nums)
 
-print(pascal_triangle)
-
 longest_line = sum([len(str(x))+1 for x in pascal_triangle[-1]])+1
 
-print("|{:^10d}|".format(12))
+for t in pascal_triangle:
+  line = " ".join(str(x) for x in t)
+  print("{0:^{width}}".format(line, width=longest_line))
