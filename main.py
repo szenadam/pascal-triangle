@@ -10,8 +10,7 @@ def calc_binom(n, k):
     return int(fact(n)/(fact(k)*fact(n-k)))
 
 
-# lines = int(input("Number of lines: "))
-lines = 10
+lines = int(input("Number of lines: "))
 
 pascal_triangle = []
 for i in range(lines):
