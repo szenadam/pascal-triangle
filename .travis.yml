@@ -3,3 +3,5 @@ python:
   - "3.6"
 script:
   - python main.py
+env:
+  - CI=1
