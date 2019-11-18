@@ -1,5 +1,3 @@
-import os
-
 def fact(n):
     if n == 0:
         return 1
@@ -12,9 +10,7 @@ def calc_binom(n, k):
     return int(fact(n)/(fact(k)*fact(n-k)))
 
 lines = 10
-
-if os.environ.get('CI'):
-    lines = int(input("Number of lines: "))
+#lines = int(input("Number of lines: "))
 
 pascal_triangle = []
 for i in range(lines):
